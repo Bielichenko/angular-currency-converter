@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ConverterComponent } from './converter/converter.component';
 import { ExchangeRatesService } from './exchange-rates.service';
+import { TextTransformPipe } from './pipes/text-transform.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ConverterComponent,
+    TextTransformPipe,
   ],
   imports: [
     BrowserModule,

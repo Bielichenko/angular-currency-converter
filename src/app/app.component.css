@@ -1,11 +1,16 @@
-.red {
-  color: red;
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 100vh;
+
+  background-color: rgb(246, 246, 193);
 }
 
-.green {
-  color: green;
+.headerWrapper {
+  width: 100%;
+
+  margin-bottom: 200px;
 }
 
-.blue {
-  color: blue;
-}

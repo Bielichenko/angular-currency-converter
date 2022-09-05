@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: end;
+  background-color: rgb(255, 62, 48);
+
+  width: 100%;
+
+  padding: 15px;
+
+  color: rgb(246, 250, 109);
+  border-bottom: #a53030 1px solid;
+}
+
+.actualRates {
+  display: flex;
+  justify-content: space-between;
+
+  width: 330px;
+}

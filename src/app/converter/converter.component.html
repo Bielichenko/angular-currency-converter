@@ -1,19 +1,33 @@
-<p>Currency converter</p>
-<input type="number" (keydown)="changeOrder(1)" (change)="changeOrder(1)" [(ngModel)]='firstValue'>
-<select (change)="setFirstCurrency($event)" [(ngModel)]='firstCurrency'>
-  <option value="Select currency" disabled>Select currency</option>
-  <option value="UAH">Україньска гривня UAH</option>
-  <option value="USD">Американський доллар - USD</option>
-  <option value="EUR">Євро</option>
-  <option value="GBP">Британський фунт - GBP</option>
-  <option value="PLN">Польский злотий - PLN</option>
-</select>
-<input type="number" (keydown)="changeOrder(-1)" (change)="changeOrder(-1)" [(ngModel)]='secondValue'>
-<select [(ngModel)]='secondCurrency' (change)="setSecondCurrency($event)">
-  <option value="Select currency" disabled>Select currency</option>
-  <option value="UAH">Україньска гривня UAH</option>
-  <option value="USD">Американський доллар - USD</option>
-  <option value="EUR">Євро</option>
-  <option value="GBP">Британський фунт - GBP</option>
-  <option value="PLN">Польский злотий - PLN</option>
-</select>
+<div class="converter">
+  <h1 class="title">Live currency converter</h1>
+
+  <div class="dataContainer">
+    <p class="currencyTitle">First currency</p>
+    <input type="number" (keydown)="changeOrder(1)" (change)="changeOrder(1)" [(ngModel)]='firstValue'
+      placeholder="Enter the amount here" class="input">
+    <select (change)="setFirstCurrency($event)" [(ngModel)]='firstCurrency' class="select">
+      <option value="Select currency" disabled>Select currency</option>
+      <option value="UAH">Україньска гривня - UAH</option>
+      <option value="USD">Американський доллар - USD</option>
+      <option value="EUR">Євро</option>
+      <option value="GBP">Британський фунт - GBP</option>
+      <option value="PLN">Польский злотий - PLN</option>
+    </select>
+  </div>
+
+  <div class="dataContainer">
+    <p class="currencyTitle">Second currency</p>
+    <input type="number" (keydown)="changeOrder(-1)" (change)="changeOrder(-1)" [(ngModel)]='secondValue'
+      placeholder="Or here" class="input">
+    <select [(ngModel)]='secondCurrency' (change)="setSecondCurrency($event)" class="select">
+      <option value="Select currency" disabled>Select currency</option>
+      <option value="UAH">Україньска гривня - UAH</option>
+      <option value="USD">Американський доллар - USD</option>
+      <option value="EUR">Євро</option>
+      <option value="GBP">Британський фунт - GBP</option>
+      <option value="PLN">Польский злотий - PLN</option>
+    </select>
+  </div>
+
+  <p style = "color: black" class="source">Api from: cur.su.</p>
+</div>
