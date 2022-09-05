@@ -1,0 +1,19 @@
+<p>Currency converter</p>
+<input type="number" (keydown)="changeOrder(1)" (change)="changeOrder(1)" [(ngModel)]='firstValue'>
+<select (change)="setFirstCurrency($event)" [(ngModel)]='firstCurrency'>
+  <option value="Select currency" disabled>Select currency</option>
+  <option value="UAH">Україньска гривня UAH</option>
+  <option value="USD">Американський доллар - USD</option>
+  <option value="EUR">Євро</option>
+  <option value="GBP">Британський фунт - GBP</option>
+  <option value="PLN">Польский злотий - PLN</option>
+</select>
+<input type="number" (keydown)="changeOrder(-1)" (change)="changeOrder(-1)" [(ngModel)]='secondValue'>
+<select [(ngModel)]='secondCurrency' (change)="setSecondCurrency($event)">
+  <option value="Select currency" disabled>Select currency</option>
+  <option value="UAH">Україньска гривня UAH</option>
+  <option value="USD">Американський доллар - USD</option>
+  <option value="EUR">Євро</option>
+  <option value="GBP">Британський фунт - GBP</option>
+  <option value="PLN">Польский злотий - PLN</option>
+</select>
